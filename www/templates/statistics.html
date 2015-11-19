@@ -1,0 +1,43 @@
+<ion-view view-title="Start" name="start-view" hide-nav-bar="true">
+  <ion-tabs class="tabs-positive tabs-icon-only">
+
+    <ion-tab title="Brain Score History">
+      <br/><br/><br/>
+      <div class="item item-divider">
+        Brain Score History
+      </div>
+      <div class="item item-text-wrap">
+        <canvas id="line" class="chart chart-line" data="data_bs" labels="labels_bs" legend="true" series="series_bs" options="{showTooltips: false}"></canvas>
+      </div>
+      </div>
+      <br/><br/>
+      <button class="button button-energized" ng-click="backButton()" style="display:block;margin:0 auto;width: 200px;">
+        < back
+      </button>
+
+    </ion-tab>
+
+    <ion-tab title="Best Time History">
+      <br/><br/><br/>
+      <div class="item item-divider">
+        Best Time History
+      </div>
+      <div class="item item-text-wrap">
+        <canvas id="line" class="chart chart-line" data="data_bt" labels="labels_bt" legend="true" series="series_bt" options="{showTooltips: false}"></canvas>
+      </div>
+      </div>
+      <br/><br/>
+      <button class="button button-energized" ng-click="backButton()" style="display:block;margin:0 auto;width: 200px;">
+        < back
+      </button>
+    </ion-tab>
+
+  </ion-tabs>
+
+
+  <ion-content class="padding" scroll="false" style="background-color: #72AC62;">
+
+  <!--div class="card">
+
+  </ion-content--!>
+</ion-view>

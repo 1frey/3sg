@@ -1,0 +1,24 @@
+<ion-view view-title="Result" name="result-view">
+  <ion-content class="padding" scroll="false">
+    <p>Result:</p>
+    <p>Time Over: {{isTimeOver}}</p>
+    <p>Front View: {{questions[0].correct}}</p>
+    <p>Top View: {{questions[1].correct}}</p>
+    <p>Color: {{questions[2].correct}}</p>
+    <p>Time: {{myTime.toFixed(2)}} Brain Score: {{brainScore.toFixed(0)}}</p>
+    <p>Best Time: {{score.bestTime || '-'}}</p>
+    <p>Expected:</p>
+    <img ng-src="{{currentGeometryURL}}" style="width: 56px; height: 56px;">
+    <p>Yours:</p>
+    <img ng-src="{{yourGeometrySelectionURL}}" style="width: 56px; height: 56px;">
+    <p>{{score.bestTimeList}} > {{bestTimeAvg()}} - {{score.hits}} / {{score.tries}}</p>
+
+    <button class="button button-energized" ng-click="restartGame()" style="display:block;margin:0 auto;width: 200px;">
+      Restart
+    </button>
+
+    <a ng-click="clearData()" href="#">Clear data</a><br/>
+    <a ng-click="openStatistics()" href="#">Statistics</a>
+
+  </ion-content>
+</ion-view>
